@@ -22,7 +22,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
-        <Image src={"/assets/images/onboarding-img.png"} alt={"Onboarding"} height={1000} width={1000} className={"side-img max-w-[50%]"}/>
+        <Image src="/assets/images/onboarding-img.png" alt="Onboarding" height={1000} width={1000} className="side-img max-w-[50%]"/>
     </div>
   );
 }

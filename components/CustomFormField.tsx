@@ -11,6 +11,16 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import {E164Number} from "libphonenumber-js";
 
+export enum FormFieldType {
+    INPUT = "input",
+    CHECKBOX = "checkbox",
+    TEXTAREA = "textarea",
+    PHONE_INPUT = "phoneInput",
+    DATE_PICKER = "datePicker",
+    SELECT = "select",
+    SKELETON = "skeleton",
+}
+
 interface CustomProps {
     control: Control<any>,
     fieldType: FormFieldType,

@@ -10,11 +10,11 @@ import { Form } from "@/components/ui/form"
 import { createUser } from "@/lib/actions/patient.actions";
 import { UserFormValidation } from "@/lib/validation";
 
-import CustomFormField, {FormFieldType} from "@/components/CustomFormField";
+import CustomFormField from "@/components/CustomFormField";
 import SubmitButton from "@/components/SubmitButton";
 
 
-const PatientForm = () => {
+const RegisterForm = ({user}: {user: User}) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -94,4 +94,4 @@ const PatientForm = () => {
     )
 }
 
-export default PatientForm
+export default RegisterForm

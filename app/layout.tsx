@@ -4,6 +4,7 @@ import "./globals.css";
 
 import {cn} from '@/lib/utils'
 import {ThemeProvider} from '@/components/theme-provider'
+import React from "react";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets:["latin"],
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn('min-h-screen bg-dark-300 font-sans antialiased', fontSans.variable)}>
           <ThemeProvider
