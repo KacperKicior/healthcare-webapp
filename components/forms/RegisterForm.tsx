@@ -96,7 +96,7 @@ const RegisterForm = ({user}: {user: User}) => {
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
                 <section className={"mb-12 space-y-6"}>
-                    <h1 className={"header"}>Hi</h1>
+                    <h1 className={"header"}>Hi {user.name}</h1>
                     <p className={"text-dark-700"}>
                         Provide your personal details for the best outcome.
                     </p>
@@ -363,7 +363,7 @@ const RegisterForm = ({user}: {user: User}) => {
                     label={"I consent to privacy policy"}
                 />
                 
-                <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+                <SubmitButton isLoading={isLoading}>Next</SubmitButton>
             </form>
         </Form>
     )
