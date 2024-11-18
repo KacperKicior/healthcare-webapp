@@ -1,10 +1,11 @@
 'use server';
 
-import {APPOINTMENT_COLLECTION_ID, DATABASE_ID, databases} from "@/lib/appwrite.config";
+import {APPOINTMENT_COLLECTION_ID, DATABASE_ID, databases, messaging} from "@/lib/appwrite.config";
 import {ID, Query} from "node-appwrite";
-import {parseStringify} from "@/lib/utils";
+import {formatDateTime, parseStringify} from "@/lib/utils";
 import {Appointment} from "@/types/appwrite.types";
 import {revalidatePath} from "next/cache";
+import {getUser} from "@/lib/actions/patient.actions";
 
 export const createAppointment = async (appointment: CreateAppointmentParams) => {
     try {
@@ -79,6 +80,7 @@ export const getRecentAppoinmentList = async () => {
 }
 
 export const updateAppointment = async ({appointmentId, userId, appointment, type}: UpdateAppointmentParams) => {
+    const user = await getUser(userId);
     try {
         const updatedAppointment = await databases.updateDocument(
             DATABASE_ID!,
@@ -90,8 +92,30 @@ export const updateAppointment = async ({appointmentId, userId, appointment, typ
             throw new Error("Appointment not found");
         }
 
+        const smsMessage = `
+        Hello ${user.name},${type === 'schedule'?` Your appointment has been scheduled for ${formatDateTime(appointment.schedule!).dateTime} with Dr. ${appointment.primaryPhysician}.`
+            : ` We are sorry to inform you that your appointment has been cancelled. Reason: ${appointment.cancellationReason}.`
+        }
+        `;
+
+        await sendSMSNotification(userId, smsMessage);
+
         revalidatePath('/admin');
         return parseStringify(updatedAppointment);
+    }catch (error) {
+        console.log(error);
+    }
+}
+
+export const sendSMSNotification = async (userId: string, content: string) => {
+    try {
+        const message = await messaging.createSms(
+            ID.unique(),
+            content,
+            [],
+            [userId]
+        )
+        return parseStringify(message);
     }catch (error) {
         console.log(error);
     }

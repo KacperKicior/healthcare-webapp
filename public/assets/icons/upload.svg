@@ -1,4 +1,49 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="40" height="40" rx="20" fill="#2D3136"/>
-<path d="M16.6665 23.3333L19.9998 20M19.9998 20L23.3332 23.3333M19.9998 20V27.5M26.6665 23.9524C27.6844 23.1117 28.3332 21.8399 28.3332 20.4167C28.3332 17.8854 26.2811 15.8333 23.7498 15.8333C23.5677 15.8333 23.3974 15.7383 23.3049 15.5814C22.2182 13.7374 20.2119 12.5 17.9165 12.5C14.4647 12.5 11.6665 15.2982 11.6665 18.75C11.6665 20.4718 12.3627 22.0309 13.489 23.1613" stroke="#24AE7C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="40"
+   height="40"
+   viewBox="0 0 40 40"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="upload.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="20.525"
+     inkscape:cx="19.975639"
+     inkscape:cy="20"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <rect
+     width="40"
+     height="40"
+     rx="20"
+     fill="#2D3136"
+     id="rect1" />
+  <path
+     d="M16.6665 23.3333L19.9998 20M19.9998 20L23.3332 23.3333M19.9998 20V27.5M26.6665 23.9524C27.6844 23.1117 28.3332 21.8399 28.3332 20.4167C28.3332 17.8854 26.2811 15.8333 23.7498 15.8333C23.5677 15.8333 23.3974 15.7383 23.3049 15.5814C22.2182 13.7374 20.2119 12.5 17.9165 12.5C14.4647 12.5 11.6665 15.2982 11.6665 18.75C11.6665 20.4718 12.3627 22.0309 13.489 23.1613"
+     stroke="#24AE7C"
+     stroke-width="1.66667"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path1"
+     style="stroke:#b41e23;stroke-opacity:1" />
 </svg>

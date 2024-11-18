@@ -191,7 +191,7 @@ const AppointmentForm = ({
                     />
                 )}
 
-                <SubmitButton isLoading={isLoading} className={`${type === 'cancel' ? 'shad-danger-btn' : 'shad-primary-btn'} w-full`} >{buttonLabel}</SubmitButton>
+                <SubmitButton isLoading={isLoading} className={`${type === 'cancel' ? 'shad-danger-btn' : 'bg-red-500'} w-full`} >{buttonLabel}</SubmitButton>
             </form>
         </Form>
     )

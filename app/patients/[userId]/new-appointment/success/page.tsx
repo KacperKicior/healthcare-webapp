@@ -19,10 +19,10 @@ const Success = async ({params: {userId},searchParams}:SearchParamProps) => {
                 </Link>
 
                 <section className={"flex flex-col items-center"}>
-                    <Image src={"/assets/gifs/success.gif"} height={300} width={280} alt={"Success"}/>
+                    <Image src={"/assets/gifs/success.gif"} height={300} width={280} alt={"Success"} />
 
                     <h2 className={"header mb-6 max-w-[600px] text-center"}>
-                        Your <span className={"text-green-500"}>appointment request</span> has been successfully submitted.
+                        Your <span className={"text-red-500"}>appointment request</span> has been successfully submitted.
                     </h2>
                     <p>We will send confirmation in a second.</p>
                 </section>
@@ -39,7 +39,7 @@ const Success = async ({params: {userId},searchParams}:SearchParamProps) => {
                     </div>
                 </section>
                 
-                <Button variant={"outline"} className={"shad-primary-btn"} asChild>
+                <Button variant={"outline"} className={"bg-red-500"} asChild>
                     <Link href={`/patients/${userId}/new-appointment`}>New Appointment</Link>
                 </Button>
 

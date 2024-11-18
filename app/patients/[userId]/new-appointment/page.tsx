@@ -20,7 +20,7 @@ export default async function NewAppointment({params:{userId}}:SearchParamProps)
 
           </div>
         </section>
-        <Image src="/assets/images/appointment-img.png" alt="Appointment" height={1000} width={1000} className="side-img max-w-[390px] bg-bottom"/>
+        <Image src="/assets/images/appointment-img.png" alt="Appointment" height={1000} width={1000} className="side-img max-w-[390px] bg-bottom blur-sm"/>
       </div>
   );
 }

@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import PatientForm from "@/components/forms/PatientForm";
 import Link from "next/link";
 import PasskeyModal from "@/components/PasskeyModal";
+import { useSearchParams } from "next/navigation";
 
-export default function Home({searchParams}:SearchParamProps) {
-    const isAdmin = searchParams.admin === "true";
+export default function Home() {
+    const searchParams = useSearchParams();
+    const isAdmin = searchParams.get("admin") === "true";
   return (
     <div className={"flex h-screen max-h-screen"}>
         {isAdmin && <PasskeyModal />}
@@ -18,13 +22,13 @@ export default function Home({searchParams}:SearchParamProps) {
                     <p className={"justify-items-end text-dark-600 xl:text-left"}>
                         © 2024 Heathcare. All rights reserved.
                     </p>
-                    <Link href="/?admin=true" className={"text-green-500"}>
+                    <Link href="/?admin=true" className={"text-red-500"}>
                         Admin
                     </Link>
                 </div>
             </div>
         </section>
-        <Image src="/assets/images/onboarding-img.png" alt="Onboarding" height={1000} width={1000} className="side-img max-w-[50%]"/>
+        <Image src="/assets/images/onboarding-img.jpg" alt="Onboarding" height={1000} width={1000} className="side-img max-w-[50%]"/>
     </div>
   );
 }
