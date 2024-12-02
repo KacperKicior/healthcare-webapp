@@ -20,17 +20,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Heathcare Web App
 
-To learn more about Next.js, take a look at the following resources:
+App was created using Next.js 14, Appwrite Database and authentication and Twillio SMS Notifications system.
+As patient you can create appointment after providing set credentials, after confirmation user gets notification about their schedule
+or gets information about cancelment of said appointment.
+As admin you can enter to dashboard with all appointments (pending, scheduled, canceled) which is locked behind OTP verification.
+On dashboard there is option to administrate incoming appointments with abitity to change hour or doctor of the visit.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Used Technologies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-Next.js
+-Tailwind.css
+-Shadcn UI Components
+-Appwrite Database and Authentication
+-Twilio SMS Notification System
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
