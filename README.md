@@ -6,6 +6,9 @@ or gets information about cancelment of said appointment.
 As admin you can enter to dashboard with all appointments (pending, scheduled, canceled) which is locked behind OTP verification.
 On dashboard there is option to administrate incoming appointments with abitity to change hour or doctor of the visit.
 
+Live preview: https://kacperkicior-healthcare-webapp.vercel.app
+OTP for admin console: 247700
+
 The aim of this project was to learn fundamental knowledge of Next.js and was done as a part of course on "JavaScript Mastery" Youtube Channel.
 
 ## Used Technologies
